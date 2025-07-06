@@ -1,0 +1,401 @@
+{
+  "concurso": "TJPA",
+  "cargo": "Analista de Sistemas",
+  "disciplinas": {
+    "lingua_portuguesa": {
+      "1": "Compreensão e interpretação de textos de gêneros variados.",
+      "2": "Reconhecimento de tipos e gêneros textuais.",
+      "3": "Domínio da ortografia oficial.",
+      "4": {
+        "descricao": "Domínio dos mecanismos de coesão textual.",
+        "4.1": "Emprego de elementos de referenciação, substituição e repetição, de conectores e de outros elementos de sequenciação textual.",
+        "4.2": "Emprego de tempos e modos verbais."
+      },
+      "5": {
+        "descricao": "Domínio da estrutura morfossintática do período.",
+        "5.1": "Emprego das classes de palavras.",
+        "5.2": "Relações de coordenação entre orações e entre termos da oração.",
+        "5.3": "Relações de subordinação entre orações e entre termos da oração.",
+        "5.4": "Emprego dos sinais de pontuação.",
+        "5.5": "Concordância verbal e nominal.",
+        "5.6": "Regência verbal e nominal.",
+        "5.7": "Emprego do sinal indicativo de crase.",
+        "5.8": "Colocação dos pronomes átonos."
+      },
+      "6": {
+        "descricao": "Reescrita de frases e parágrafos do texto.",
+        "6.1": "Significação das palavras.",
+        "6.2": "Substituição de palavras ou de trechos de texto.",
+        "6.3": "Reorganização da estrutura de orações e de períodos do texto.",
+        "6.4": "Reescrita de textos de diferentes gêneros e níveis de formalidade."
+      }
+    },
+    "etica_no_servico_publico": {
+      "1": "Ética e moral.",
+      "2": "Ética, princípios e valores.",
+      "3": "Ética e democracia: exercício da cidadania.",
+      "4": "Ética e função pública.",
+      "5": {
+        "descricao": "Ética no setor público.",
+        "5.1": "Código de Ética Profissional do Serviço Público (Decreto nº 1.171/1994).",
+        "5.2": {
+          "descricao": "Lei nº 8.112/1990 e alterações.",
+          "5.2.1": "Regime disciplinar (deveres e proibições, acumulação, responsabilidades, penalidades)."
+        }
+      },
+      "6": {
+        "descricao": "Lei nº 8.429/1992.",
+        "6.1": "Disposições gerais.",
+        "6.2": "Atos de improbidade administrativa."
+      },
+      "7": "Lei nº 12.846/2013 (Lei Anticorrupção).",
+      "8": "Lei nº 9.784/1999 (Processo Administrativo Federal).",
+      "9": "Resolução TJPA nº 14/2016 (Código de Ética do Tribunal de Justiça do Pará)."
+    },
+    "administracao_publica_e_poder_judiciario": {
+      "1": {
+        "descricao": "Comportamento organizacional.",
+        "1.1": "Teorias da motivação.",
+        "1.2": "Motivação e recompensas intrínsecas e extrínsecas.",
+        "1.3": "Motivação e contrato psicológico.",
+        "1.4": "Percepção, atitudes e diferenças individuais.",
+        "1.5": "Comunicação interpessoal.",
+        "1.6": "Barreiras à comunicação.",
+        "1.7": "Comunicação formal e informal na organização.",
+        "1.8": "Comportamento grupal e intergrupal.",
+        "1.9": "Processo de desenvolvimento de grupos.",
+        "1.10": "Administração de conflitos.",
+        "1.11": "Liderança e poder.",
+        "1.12": "Teorias da liderança.",
+        "1.13": "Gestão de equipes.",
+        "1.14": "Gestão participativa.",
+        "1.15": "Desempenho e suporte organizacional.",
+        "1.16": "Desenvolvimento organizacional.",
+        "1.17": "Qualidade de vida no trabalho.",
+        "1.18": "Clima organizacional.",
+        "1.19": "Cultura organizacional.",
+        "1.20": "Modelos de gestão de pessoas."
+      },
+      "2": {
+        "descricao": "Empreendedorismo governamental e novas lideranças no setor público.",
+        "2.1": "Processos participativos de gestão pública.",
+        "2.2": "Conselhos de gestão, orçamento participativo, parceria entre governo e sociedade."
+      },
+      "3": {
+        "descricao": "Transparência da administração pública.",
+        "3.1": "Controle social e cidadania.",
+        "3.2": "Accountability."
+      },
+      "4": {
+        "descricao": "Excelência nos serviços públicos.",
+        "4.1": "Gestão por resultados na produção de serviços públicos."
+      },
+      "5": "Comunicação na gestão pública e gestão de redes organizacionais.",
+      "6": {
+        "descricao": "Governabilidade e governança.",
+        "6.1": "Intermediação de interesses (clientelismo, corporativismo e neocorporativismo)."
+      },
+      "7": "O ciclo do planejamento em organizações (PDCA).",
+      "8": {
+        "descricao": "Balanced Scorecard (BSC).",
+        "8.1": "Principais conceitos, aplicações, mapa estratégico, perspectivas, temas estratégicos, objetivos estratégicos, relações de causa e efeito, indicadores, metas, iniciativas estratégicas."
+      },
+      "9": {
+        "descricao": "Referencial estratégico das organizações.",
+        "9.1": "Análise de ambiente interno e externo.",
+        "9.2": {
+          "descricao": "Ferramentas de análise de ambiente.",
+          "9.2.1": "Análise SWOT, análise de cenários, matriz GUT."
+        },
+        "9.3": "Negócio, missão, visão de futuro, valores."
+      },
+      "10": {
+        "descricao": "Indicadores de desempenho.",
+        "10.1": "Tipos de indicadores.",
+        "10.2": "Variáveis componentes dos indicadores."
+      },
+      "11": "Resolução nº 325/2020 (Dispõe sobre o planejamento e a gestão estratégica no âmbito do Poder Judiciário e dá outras providências).",
+      "12": {
+        "descricao": "Plano estratégico do Poder Judiciário do Estado do Pará para o período de 2021 a 2026, revisado pela Resolução TJPA nº 2/2023.",
+        "12.1": "Missão, visão, valores e macrodesafios do Tribunal de Justiça do Estado do Pará."
+      },
+      "13": {
+        "descricao": "Portaria TJPA nº 1132/2025-GP, de 19 de fevereiro de 2025.",
+        "13.1": "Dispõe sobre o Índice de Eficiência Judiciária do Poder Judiciário do Estado do Pará (IE-Jud) e atualiza a sua metodologia. Definição, objetivo e indicadores."
+      }
+    },
+    "legislacao": {
+      "1": "Regimento Interno do Tribunal de Justiça do Estado do Pará.",
+      "2": "Lei estadual nº 5.810/1994 e suas alterações (Regime Jurídico Único dos servidores públicos do Estado do Pará).",
+      "3": "Lei estadual nº 10.803/2024 (Novo Plano de Cargos, Carreiras e Remunerações).",
+      "4": "Lei Estadual nº 8.972/2020 e suas alterações (Regula o processo administrativo no âmbito da Administração Pública do Estado do Pará).",
+      "5": "Resolução nº 351/2020 (Política de Prevenção e Enfrentamento do Assédio Moral, do Assédio Sexual e da Discriminação)."
+    },
+    "matematica_e_raciocinio_logico": {
+      "1": "Conjuntos numéricos: números inteiros, racionais e reais.",
+      "2": "Sistema legal de medidas.",
+      "3": {
+        "descricao": "Razões e proporções.",
+        "3.1": "Divisão proporcional.",
+        "3.2": "Regras de três simples e compostas.",
+        "3.3": "Porcentagens."
+      },
+      "4": "Equações e inequações de 1º e de 2º graus.",
+      "5": "Sistemas lineares.",
+      "6": "Funções e gráficos.",
+      "7": "Princípios de contagem.",
+      "8": "Progressões aritméticas e geométricas.",
+      "9": "Compreensão de estruturas lógicas.",
+      "10": "Lógica de argumentação: analogias, inferências, deduções e conclusões.",
+      "11": {
+        "descricao": "Lógica sentencial (ou proposicional).",
+        "11.1": "Proposições simples e compostas.",
+        "11.2": "Tabelas-verdade.",
+        "11.3": "Equivalências.",
+        "11.4": "Leis de De Morgan.",
+        "11.5": "Diagramas lógicos."
+      },
+      "12": "Lógica de primeira ordem.",
+      "13": "Princípios de contagem e probabilidade.",
+      "14": "Operações com conjuntos.",
+      "15": "Raciocínio lógico envolvendo problemas aritméticos, geométricos e matriciais."
+    },
+    "atualidades_prova_discursiva": {
+      "1": "Tópicos relevantes e atuais de diversas áreas, tais como segurança, transportes, política, economia, sociedade, educação, saúde, cultura, tecnologia, energia, relações internacionais, desenvolvimento sustentável e ecologia, suas inter-relações e suas vinculações históricas."
+    },
+    "gestao_e_governanca_de_ti": {
+      "1": {
+        "descricao": "Gestão estratégica.",
+        "1.1": "Planejamento estratégico de negócio.",
+        "1.2": "Planejamento estratégico de TI.",
+        "1.3": "Alinhamento estratégico entre TI e negócio."
+      },
+      "2": {
+        "descricao": "Gerenciamento de projetos (PMBOK 7ª edição).",
+        "2.1": "Conceitos básicos, estrutura e objetivos.",
+        "2.2": "Projetos e a organização.",
+        "2.3": "Ciclo de vida de projeto e ciclo de vida do produto.",
+        "2.4": "Processos, grupos de processos e áreas de conhecimento."
+      },
+      "3": {
+        "descricao": "Gerenciamento de serviços (ITIL v4).",
+        "3.1": "Conceitos básicos, estrutura e objetivos.",
+        "3.2": "Processos e funções de estratégia, desenho, transição e operação de serviços."
+      },
+      "4": {
+        "descricao": "Governança de TI (COBIT 2019).",
+        "4.1": "Conceitos básicos, estrutura e objetivos.",
+        "4.2": "Requisitos da informação.",
+        "4.3": "Recursos de tecnologia da informação.",
+        "4.4": "Domínios, processos e objetivos de controle."
+      },
+      "5": {
+        "descricao": "Qualidade de software (CMMI, versão atual).",
+        "5.1": "Conceitos básicos, estrutura e objetivos.",
+        "5.2": "Disciplinas e formas de representação.",
+        "5.3": "Níveis de capacidade e maturidade.",
+        "5.4": "Processos e categorias de processos."
+      }
+    },
+    "DESENVOLVIMENTO_DE_SISTEMAS": {
+      "1": {
+        "titulo": "Desenvolvimento de sistemas",
+        "descricao": [
+          "Desenvolvimento em Linguagens de programação Java (versão 6 ou superior), Javascript e COBOL.",
+          "Desenvolvimento para dispositivos móveis (Android e iOs)."
+        ]
+      },
+      "2": "Análise estática de código-fonte (clean code e ferramenta SonarQube).",
+      "3": {
+        "titulo": "Arquitetura de software",
+        "descricao": [
+          "Interoperabilidade de sistemas.",
+          "Arquitetura e linguagem orientada a serviços.",
+          "Web services.",
+          "API.",
+          "Arquitetura e linguagem orientada a objetos.",
+          "Arquitetura de aplicações para ambiente web.",
+          "Servidor de aplicações.",
+          "Servidor web."
+        ]
+      },
+      "4": "Ambientes Internet, extranet, intranet e portal: finalidades, características físicas e lógicas, aplicações e serviços.",
+      "5": "Padrões XML, XSLT, UDDI, REST e JSON.",
+      "6": "DevOps.",
+      "7": {
+        "titulo": "Ferramenta de Gestão da configuração GIT",
+        "testes": {
+          "conceitos": "conceitos básicos de testes de aplicações.",
+          "testes_agiles": "Testes ágeis.",
+          "usabilidade": "Teste de usabilidade de software.",
+          "automatizados": "Testes automatizados.",
+          "tipos": "Tipos de testes.",
+          "tdd": "Test-driven development (TDD).",
+          "gestao_ciclo": "Gestão do ciclo de vida de testes.",
+          "rpa": "RPA (robotic process automation)."
+        }
+      },
+      "8": {
+        "titulo": "Metodologias Ágeis de Desenvolvimento",
+        "itens": {
+          "8.1": "Scrum",
+          "8.2": "Kanban",
+          "8.3": "XP"
+        }
+      },
+      "9": "Padrões de desenvolvimento e reuso.",
+      "10": "Codificação de software (transacionais, analíticos, mobile e API).",
+      "11": "Metodologia de Ponto de Função.",
+      "12": {
+        "titulo": "Engenharia de Requisitos",
+        "itens": {
+          "12.1": "Classificação de Requisitos.",
+          "12.2": "Processo de Engenharia de Requisitos.",
+          "12.3": "Técnicas de Elicitação de Requisitos."
+        }
+      },
+      "13": {
+        "titulo": "Tecnologias e práticas frontend web",
+        "descricao": [
+          "HTML",
+          "CSS",
+          "UX",
+          "Ajax",
+          "frameworks (VueJS e React)"
+        ],
+        "padroes_frontend": {
+          "13.1": "Padrões de frontend",
+          "13.1.1": "SPA e PWA"
+        }
+      },
+      "14": "Protocolos HTTPS, SSL/TLS.",
+      "15": "Blockchain.",
+      "16": {
+        "titulo": "Design de software",
+        "descricao": [
+          "Arquitetura hexagonal",
+          "microsserviços (orquestração de serviços e API gateway)",
+          "containers"
+        ]
+      },
+      "17": "Transações distribuídas.",
+      "18": {
+        "titulo": "User Experience (UX)",
+        "sistemas_gestao_conteudo": {
+          "18.1": "Sistemas de gestão de conteúdo",
+          "18.1.1": "Conceitos básicos e aplicações.",
+          "18.1.2": "Arquitetura de informação.",
+          "18.1.3": {
+            "titulo": "Portais corporativos",
+            "descricao": {
+              "18.1.3.1": "Conceitos básicos e aplicações."
+            }
+          },
+          "18.1.4": "Workflow.",
+          "18.1.5": "Conceitos de acessibilidade e usabilidade.",
+          "18.1.6": "Desenho e planejamento de interação em aplicações web."
+        }
+      },
+      "19": "Conceitos de Inteligência Artificial, Análise de Dados e Big Data."
+    },
+    "NORMATIVOS_DA_PDPJ_BR": {
+      "1": {
+        "tipo": "Resolução CNJ",
+        "numero": "522/2023",
+        "descricao": "Institui o Modelo de Requisitos para Sistemas Informatizados de Gestão de Processos e Documentos do Poder Judiciário e disciplina a obrigatoriedade da sua utilização no desenvolvimento e manutenção de sistemas informatizados para as atividades judiciárias e administrativas no âmbito do Poder Judiciário."
+      },
+      "2": {
+        "tipo": "Resolução CNJ",
+        "numero": "335/2020",
+        "descricao": "Institui política pública para a governança e a gestão de processo judicial eletrônico. Integra os tribunais do país com a criação da Plataforma Digital do Poder Judiciário Brasileiro (PDPJ-Br). Mantém o sistema PJe como sistema de Processo Eletrônico prioritário do Conselho Nacional de Justiça."
+      },
+      "3": {
+        "tipo": "Portaria CNJ",
+        "numero": "252/2020",
+        "descricao": "Dispõe sobre o Modelo de Governança e Gestão da Plataforma Digital do Poder Judiciário (PDPJ-Br)."
+      },
+      "4": {
+        "tipo": "Portaria CNJ",
+        "numero": "253/2020",
+        "descricao": "Institui os critérios e as diretrizes técnicas para o processo de desenvolvimento de módulos e serviços na Plataforma Digital do Poder Judiciário Brasileiro (PDPJ-Br)."
+      },
+      "5": {
+        "tipo": "Portaria CNJ",
+        "numero": "131/2021",
+        "descricao": "Institui o Grupo Revisor de Código-Fonte das soluções da Plataforma Digital do Poder Judiciário (PDPJ-Br) e do Processo Judicial Eletrônico (PJe)."
+      },
+      "6": {
+        "tipo": "Resolução CNJ",
+        "numero": "396/2021",
+        "descricao": "Institui a Estratégia Nacional de Segurança Cibernética do Poder Judiciário (ENSEC-PJ)."
+      },
+      "7": {
+        "tipo": "Portaria CNJ",
+        "numero": "162/2021",
+        "descricao": "Aprova Protocolos e Manuais criados pela Resolução CNJ nº 396/2021, que instituiu a Estratégia Nacional de Segurança Cibernética do Poder Judiciário (ENSEC-PJ)."
+      },
+      "8": {
+        "tipo": "Resolução CNJ",
+        "numero": "468/2022",
+        "descricao": "Dispõe sobre diretrizes para as contratações de Solução de Tecnologia da Informação e Comunicação pelos órgãos submetidos ao controle administrativo e financeiro do Conselho Nacional de Justiça."
+      }
+    },
+    "ARQUITETURA_DE_DESENVOLVIMENTO_PDPJ_BR": {
+      "1": "Linguagem de programação Java.",
+      "2": {
+        "descricao": "Arquitetura distribuída de microsserviços",
+        "tecnologias": [
+          "API RESTful",
+          "JSON",
+          "Framework Spring",
+          "Spring Cloud",
+          "Spring Boot",
+          "Spring Eureka",
+          "Zuul",
+          "Map Struct",
+          "Swagger",
+          "Service Discovery",
+          "API Gateway"
+        ]
+      },
+      "3": {
+        "descricao": "Persistência",
+        "tecnologias": [
+          "JPA 2.0",
+          "Hibernate 4.3 ou superior",
+          "Hibernate Envers",
+          "Biblioteca Flyway"
+        ]
+      },
+      "4": {
+        "descricao": "Banco de dados",
+        "bancos": [
+          "PostgreSQL",
+          "H2 Database"
+        ]
+      },
+      "5": {
+        "descricao": "Serviços de autenticação",
+        "tecnologias": [
+          "single sign-on (SSO)",
+          "keycloak",
+          "protocolo OAuth2 (RFC 6749)"
+        ]
+      },
+      "6": {
+        "descricao": "Mensageria e webhooks",
+        "componentes": [
+          "message broker",
+          "RabbitMQ",
+          "evento negocial",
+          "webhook",
+          "APIs reversas"
+        ]
+      },
+      "7": "Ferramenta de versionamento Git.",
+      "8": "Ambiente de clusters, kubernetes.",
+      "9": "Ferramenta de orquestração de contêineres, Rancher.",
+      "10": "Deploy de aplicações; continuous delivery e continuous integration (CI/CD)."
+    }
+  }
+}

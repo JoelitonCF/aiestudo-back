@@ -1,0 +1,3 @@
+# Ignore environment variables
+.env
+app-myclass-firebase-adminsdk-fbsvc-326f021f8f.json
