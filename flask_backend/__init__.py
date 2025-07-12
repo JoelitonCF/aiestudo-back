@@ -141,6 +141,8 @@ from .routes.desafio import desafio_bp
 from .routes.plano import plano_bp
 from .routes.quiz import quiz_bp
 from .routes.user import user_bp
+from .routes.gerador import gerador_bp
+from flask_backend.database import db
 
 
 def configure_app(app: Flask):
@@ -202,6 +204,7 @@ def register_blueprints(api: Api):
     api.register_blueprint(plano_bp)
     api.register_blueprint(quiz_bp)
     api.register_blueprint(user_bp)
+    api.register_blueprint(gerador_bp)
 
 
 def create_app() -> Flask:

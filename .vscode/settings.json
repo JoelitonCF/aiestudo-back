@@ -1,5 +1,8 @@
 {
     "python.analysis.extraPaths": [
         "./flask_backend/services"
+    ],
+    "cursorpyright.analysis.extraPaths": [
+        "./flask_backend/services"
     ]
 }

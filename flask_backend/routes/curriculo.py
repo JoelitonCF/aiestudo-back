@@ -7,11 +7,13 @@ from flask_backend.schemas.curriculo_schema import CurriculoSchema
 from flask_backend.schemas.id_schema import IdSchema
 from flask_backend.schemas.curriculo_list_schema import CurriculoListSchema
 from flask_backend.services import curriculo_service
+from flask_backend.config import Config
+from flask_backend.database import db
 
 curriculo_bp = Blueprint(
     "curriculo",                   # nome interno
     "Curriculo",                   # tag no OpenAPI
-    url_prefix="/api/v1/curriculo",
+    url_prefix="/api/v1/curriculos",
     description="Gerencia currículos"
 )
 
@@ -51,3 +53,24 @@ def get_curriculo(concurso, cargo):
     if curr is None:
         abort(404, message="Currículo não encontrado")
     return curr
+
+
+@curriculo_bp.route("/<concurso>/<cargo>", methods=["PUT"])
+def update_curriculo(concurso, cargo):
+    data = request.get_json() or {}
+    doc_id = f"{concurso}_{cargo}".replace(" ", "")
+    ref = db.collection(Config.FIRESTORE_COLLECTION).document(doc_id)
+    if not ref.get().exists:
+        return jsonify({"ok": False, "erro": "Currículo não encontrado"}), 404
+    ref.update(data)
+    return jsonify({"ok": True, "mensagem": "Currículo atualizado"})
+
+
+@curriculo_bp.route("/<concurso>/<cargo>", methods=["DELETE"])
+def delete_curriculo(concurso, cargo):
+    doc_id = f"{concurso}_{cargo}".replace(" ", "")
+    ref = db.collection(Config.FIRESTORE_COLLECTION).document(doc_id)
+    if not ref.get().exists:
+        return jsonify({"ok": False, "erro": "Currículo não encontrado"}), 404
+    ref.delete()
+    return jsonify({"ok": True, "mensagem": "Currículo removido"})

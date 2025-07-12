@@ -7,6 +7,8 @@ from flask_backend.schemas.id_schema import IdSchema
 from flask_backend.schemas.flashcard_review_schema import FlashcardReviewSchema
 from flask_backend.schemas.simple_ok_schema import SimpleOkSchema
 from flask_backend.services import flashcard_service
+from flask_backend.database import db
+
 
 flashcard_bp = Blueprint(
     "flashcard",                # nome interno
@@ -60,3 +62,47 @@ def patch_revisao(payload, card_id):
         # aborta com 400 e mensagem de erro
         abort(400, message=str(e))
     return {"ok": True}
+
+
+@flashcard_bp.route("/", methods=["GET"])
+def list_flashcards():
+    user_id = request.args.get("user_id")
+    flashcards = []
+    query = db.collection("flashcards")
+    if user_id:
+        query = query.where("usuario_id", "==", user_id)
+    docs = query.stream()
+    for doc in docs:
+        f = doc.to_dict()
+        f["id"] = doc.id
+        flashcards.append(f)
+    return jsonify({"ok": True, "flashcards": flashcards})
+
+
+@flashcard_bp.route("/<card_id>", methods=["GET"])
+def get_flashcard(card_id):
+    doc = db.collection("flashcards").document(card_id).get()
+    if not doc.exists:
+        return jsonify({"ok": False, "erro": "Flashcard não encontrado"}), 404
+    flashcard = doc.to_dict()
+    flashcard["id"] = doc.id
+    return jsonify({"ok": True, "flashcard": flashcard})
+
+
+@flashcard_bp.route("/<card_id>", methods=["PUT"])
+def update_flashcard(card_id):
+    data = request.get_json() or {}
+    ref = db.collection("flashcards").document(card_id)
+    if not ref.get().exists:
+        return jsonify({"ok": False, "erro": "Flashcard não encontrado"}), 404
+    ref.update(data)
+    return jsonify({"ok": True, "mensagem": "Flashcard atualizado"})
+
+
+@flashcard_bp.route("/<card_id>", methods=["DELETE"])
+def delete_flashcard(card_id):
+    ref = db.collection("flashcards").document(card_id)
+    if not ref.get().exists:
+        return jsonify({"ok": False, "erro": "Flashcard não encontrado"}), 404
+    ref.delete()
+    return jsonify({"ok": True, "mensagem": "Flashcard removido"})
