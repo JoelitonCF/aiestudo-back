@@ -1,7 +1,15 @@
-from marshmallow import Schema, fields
+from marshmallow import Schema, fields, validate
 
 
 class PlanoSchema(Schema):
-    concurso = fields.Str(required=True)
-    cargo = fields.Str(required=True)
-    dias = fields.Int(load_default=30, validate=lambda n: n > 0)
+    usuario_id = fields.String(required=True, validate=validate.Length(
+        min=1), description="ID do usuário")
+    concurso = fields.String(required=True, validate=validate.Length(
+        min=1), description="Nome do concurso")
+    cargo = fields.String(required=True, validate=validate.Length(
+        min=1), description="Cargo pretendido")
+    tempo_disponivel = fields.Integer(validate=validate.Range(
+        min=1, max=24), description="Horas disponíveis por dia")
+    data_prova = fields.String(description="Data da prova (YYYY-MM-DD)")
+    disciplinas_foco = fields.List(
+        fields.String(), description="Lista de disciplinas prioritárias")

@@ -1,7 +1,7 @@
 # flask_backend/routes/plano.py
 
 from flask import request, jsonify
-from flask_smorest import Blueprint
+from flask_smorest import Blueprint, abort
 from flask_backend.schemas.plano_schema import PlanoSchema
 from flask_backend.services import plano_service
 from flask_backend.database import db
@@ -9,58 +9,80 @@ from flask_backend.database import db
 plano_bp = Blueprint('plano', __name__, url_prefix='/api/v1')
 
 
+@plano_bp.arguments(PlanoSchema, location="json")
+@plano_bp.response(201, description="Plano de estudos criado com sucesso")
 @plano_bp.route("/planos", methods=["POST"])
-def criar_plano():
-    payload = request.get_json() or {}
-    payload = PlanoSchema().load(payload)
-    concurso = payload.get("concurso", "")
-    cargo = payload.get("cargo", "")
-    dias = payload.get("dias", 30)
-    if not concurso or not cargo:
-        return jsonify({"erro": "Concurso e cargo são obrigatórios"}), 400
-    plano = plano_service.gerar_plano(
-        concurso, cargo, dias
-    )
-    if plano is None:
-        return jsonify({"erro": "Currículo não encontrado"}), 404
-    return jsonify(plano), 201
+def post_plano(plano_data):
+    """Cria um novo plano de estudos personalizado."""
+    try:
+        plano_id = plano_service.gerar_plano(
+            usuario_id=plano_data["usuario_id"],
+            concurso=plano_data["concurso"],
+            cargo=plano_data["cargo"],
+            tempo_disponivel=plano_data.get(
+                "tempo_disponivel", 2),  # horas por dia
+            data_prova=plano_data.get("data_prova"),
+            disciplinas_foco=plano_data.get("disciplinas_foco", [])
+        )
 
+        return {"plano_id": plano_id, "status": "criado"}, 201
+
+    except Exception as e:
+        abort(500, message=f"Erro ao criar plano: {str(e)}")
+
+
+@plano_bp.response(200, description="Lista de planos de estudo")
 @plano_bp.route("/planos", methods=["GET"])
-def list_planos():
-    user_id = request.args.get("user_id")
-    planos = []
-    query = db.collection("planos")
-    if user_id:
-        query = query.where("usuario_id", "==", user_id)
-    docs = query.stream()
-    for doc in docs:
-        p = doc.to_dict()
-        p["id"] = doc.id
-        planos.append(p)
-    return jsonify({"ok": True, "planos": planos})
+def listar_planos():
+    """Lista planos de estudo do usuário."""
+    usuario_id = request.args.get("usuario_id")
 
+    if not usuario_id:
+        abort(400, message="usuario_id é obrigatório")
+
+    try:
+        planos = plano_service.listar_planos_usuario(usuario_id)
+        return {"planos": planos}
+
+    except Exception as e:
+        abort(500, message=f"Erro ao listar planos: {str(e)}")
+
+
+@plano_bp.response(200, description="Detalhes do plano de estudos")
 @plano_bp.route("/planos/<plano_id>", methods=["GET"])
-def get_plano(plano_id):
-    doc = db.collection("planos").document(plano_id).get()
-    if not doc.exists:
-        return jsonify({"ok": False, "erro": "Plano não encontrado"}), 404
-    plano = doc.to_dict()
-    plano["id"] = doc.id
-    return jsonify({"ok": True, "plano": plano})
+def obter_plano(plano_id):
+    """Obtém detalhes de um plano específico."""
+    try:
+        plano = plano_service.obter_plano(plano_id)
+        if not plano:
+            abort(404, message="Plano não encontrado")
 
+        return plano
+
+    except Exception as e:
+        abort(500, message=f"Erro ao obter plano: {str(e)}")
+
+
+@plano_bp.arguments(PlanoSchema, location="json")
+@plano_bp.response(200, description="Plano atualizado com sucesso")
 @plano_bp.route("/planos/<plano_id>", methods=["PUT"])
-def update_plano(plano_id):
-    data = request.get_json() or {}
-    ref = db.collection("planos").document(plano_id)
-    if not ref.get().exists:
-        return jsonify({"ok": False, "erro": "Plano não encontrado"}), 404
-    ref.update(data)
-    return jsonify({"ok": True, "mensagem": "Plano atualizado"})
+def atualizar_plano(plano_data, plano_id):
+    """Atualiza um plano de estudos."""
+    try:
+        plano_service.atualizar_plano(plano_id, plano_data)
+        return {"message": "Plano atualizado com sucesso"}
 
+    except Exception as e:
+        abort(500, message=f"Erro ao atualizar plano: {str(e)}")
+
+
+@plano_bp.response(200, description="Plano deletado com sucesso")
 @plano_bp.route("/planos/<plano_id>", methods=["DELETE"])
-def delete_plano(plano_id):
-    ref = db.collection("planos").document(plano_id)
-    if not ref.get().exists:
-        return jsonify({"ok": False, "erro": "Plano não encontrado"}), 404
-    ref.delete()
-    return jsonify({"ok": True, "mensagem": "Plano removido"})
+def deletar_plano(plano_id):
+    """Deleta um plano de estudos."""
+    try:
+        plano_service.deletar_plano(plano_id)
+        return {"message": "Plano deletado com sucesso"}
+
+    except Exception as e:
+        abort(500, message=f"Erro ao deletar plano: {str(e)}")
